@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b2e">
+  <meta name="description" content="QPrakriti explores practical engineering approaches to Post-Quantum Cryptography migration, cryptographic visibility, risk prioritisation, and validation.">
+  <title>QPrakriti — Engineering the Quantum-Safe Transition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="QPrakriti home">
+        <img src="assets/qprakriti-original-logo.jpg" alt="QPrakriti original emblem" class="brand-mark">
+        <span class="brand-word">QPrakriti<span class="brand-dot">.</span><small>QUANTUM-SAFE ENGINEERING</small></span>
+      </a>
+      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+        <a href="#challenge">The Challenge</a>
+        <a href="#approach">Our Approach</a>
+        <a href="#research">Research</a>
+        <a href="#about">About</a>
+        <a class="nav-cta" href="#contact">Collaborate <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-dark">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="container hero-layout">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="eyebrow-line"></span> QUANTUM-SAFE SECURITY · MIGRATION ENGINEERING</div>
+          <h1>Prepare for the quantum future.<br><span>Engineer the transition.</span></h1>
+          <p class="hero-lead">The shift to post-quantum cryptography is more than an algorithm change. It is a complex engineering journey across software, infrastructure, dependencies, and operational systems.</p>
+          <p class="hero-sub">QPrakriti is exploring practical software approaches to help make that journey more visible, measurable, and manageable.</p>
+          <div class="hero-actions">
+            <a class="button button-orange" href="#approach">Explore our approach <span aria-hidden="true">↘</span></a>
+            <a class="text-link light-link" href="#research">What we're exploring <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="hero-proof">
+            <span class="pulse-dot"></span><span>Research-led. Engineering-focused. Built around real problems.</span>
+          </div>
+        </div>
+        <div class="hero-visual reveal" aria-label="Abstract illustration of cryptographic components within an interconnected digital system">
+          <div class="visual-label label-top"><span class="tiny-dot"></span> CRYPTOGRAPHIC LANDSCAPE</div>
+          <svg class="network-art" viewBox="0 0 560 520" role="img" aria-label="Connected systems surrounding a central cryptographic shield">
+            <defs>
+              <linearGradient id="shieldGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9a47"/><stop offset="1" stop-color="#f36d21"/></linearGradient>
+              <radialGradient id="glow"><stop offset="0" stop-color="#f47b32" stop-opacity=".28"/><stop offset="1" stop-color="#f47b32" stop-opacity="0"/></radialGradient>
+              <filter id="softGlow"><feGaussianBlur stdDeviation="7"/></filter>
+            </defs>
+            <circle cx="280" cy="260" r="205" fill="url(#glow)"/>
+            <g class="orbit orbit-a"><ellipse cx="280" cy="260" rx="225" ry="100" transform="rotate(-32 280 260)" fill="none" stroke="#47627f" stroke-width="1.2" stroke-dasharray="4 9"/></g>
+            <g class="orbit orbit-b"><ellipse cx="280" cy="260" rx="205" ry="140" transform="rotate(43 280 260)" fill="none" stroke="#47627f" stroke-width="1.2" stroke-dasharray="3 10"/></g>
+            <g stroke="#55718e" stroke-width="1.2" opacity=".85">
+              <path d="M280 260 L103 126 L65 220 M280 260 L455 125 L493 218 M280 260 L105 385 L70 312 M280 260 L455 390 L500 315"/>
+              <path d="M103 126 L215 70 L280 260 L358 78 L455 125 M105 385 L215 448 L280 260 L360 450 L455 390"/>
+              <path d="M65 220 L151 274 L70 312 M493 218 L410 274 L500 315"/>
+            </g>
+            <g fill="#172c46" stroke="#5b7896" stroke-width="1.5">
+              <rect x="49" y="88" width="108" height="72" rx="13"/><rect x="398" y="87" width="108" height="72" rx="13"/>
+              <rect x="32" y="273" width="100" height="72" rx="13"/><rect x="428" y="274" width="100" height="72" rx="13"/>
+              <rect x="164" y="30" width="104" height="60" rx="12"/><rect x="308" y="30" width="104" height="60" rx="12"/>
+              <rect x="164" y="428" width="104" height="60" rx="12"/><rect x="308" y="428" width="104" height="60" rx="12"/>
+            </g>
+            <g stroke="#f47b32" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M78 111h49v25H78z M86 119h33 M86 127h24"/>
+              <path d="M429 109h45v30h-45z M438 117h27 M438 125h19 M438 133h23"/>
+              <circle cx="82" cy="296" r="13"/><path d="M72 296h20 M82 286v20"/>
+              <path d="M458 292h38v28h-38z M465 300h24 M465 308h16"/>
+              <path d="M189 49h52v22h-52z M198 57h34 M198 64h25"/>
+              <path d="M333 48h53v24h-53z M343 56h33 M343 64h23"/>
+              <path d="M190 445h52v25h-52z M199 453h34 M199 461h25"/>
+              <path d="M334 444h51v27h-51z M343 452h32 M343 460h22"/>
+            </g>
+            <circle cx="280" cy="260" r="87" fill="#f47b32" opacity=".11" filter="url(#softGlow)"/>
+            <path d="M280 172 L346 199 V253 C346 300 318 331 280 352 C242 331 214 300 214 253 V199 Z" fill="url(#shieldGrad)" opacity=".98"/>
+            <path d="M280 189 L330 209 V252 C330 286 310 311 280 329 C250 311 230 286 230 252 V209 Z" fill="#15253b" stroke="#ffbd83" stroke-width="1.6"/>
+            <path d="M255 254 L273 272 L307 234" fill="none" stroke="#ff8b3e" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+            <g fill="#f9a05e"><circle cx="103" cy="126" r="4"/><circle cx="455" cy="125" r="4"/><circle cx="105" cy="385" r="4"/><circle cx="455" cy="390" r="4"/><circle cx="280" cy="260" r="4"/></g>
+            <g fill="#a8bdd3" font-size="10" font-family="DM Sans, sans-serif" letter-spacing="1.5"><text x="49" y="177">APPLICATIONS</text><text x="398" y="177">DEPENDENCIES</text><text x="32" y="361">PROTOCOLS</text><text x="428" y="362">INFRASTRUCTURE</text></g>
+          </svg>
+          <div class="visual-caption"><span class="caption-mark"></span><span>Make cryptography visible.<br><strong>Make migration more informed.</strong></span></div>
+        </div>
+      </div>
+      <div class="hero-bottom-rule"></div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container trust-inner">
+        <span class="trust-label">OUR RESEARCH LENS</span>
+        <span>Cryptographic visibility</span><i></i><span>Risk-based prioritisation</span><i></i><span>Migration validation</span><i></i><span>Crypto-agility</span>
+      </div>
+    </section>
+
+    <section class="section section-light" id="challenge">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="eyebrow eyebrow-dark"><span class="eyebrow-line"></span> THE CHALLENGE</div>
+          <h2>You cannot modernise<br>what you cannot <span>see.</span></h2>
+          <p>Cryptography is woven through applications, services, certificates, protocols, and software dependencies. A safe transition begins with understanding where it exists—and what depends on it.</p>
+        </div>
+        <div class="challenge-grid">
+          <article class="challenge-card reveal">
+            <div class="card-number">01 / VISIBILITY</div><div class="line-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="20" cy="20" r="11"/><path d="m28 28 10 10M15 20h10M20 15v10"/></svg></div>
+            <h3>Cryptographic blind spots</h3><p>Cryptographic functions may live in direct or transitive dependencies, legacy systems, vendor components, and configurations that are difficult to inventory.</p>
+          </article>
+          <article class="challenge-card reveal">
+            <div class="card-number">02 / PRIORITY</div><div class="line-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 38V10M8 38h34"/><path d="m13 31 8-9 7 4 11-14"/><circle cx="39" cy="12" r="3"/></svg></div>
+            <h3>Unclear migration priorities</h3><p>A list of algorithms is not a migration plan. Teams need context about data lifetime, system criticality, exposure, and the effort required to change.</p>
+          </article>
+          <article class="challenge-card reveal">
+            <div class="card-number">03 / VALIDATION</div><div class="line-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5 39 11v12c0 10-6 16-15 20C15 39 9 33 9 23V11z"/><path d="m17 24 5 5 10-11"/></svg></div>
+            <h3>Change without disruption</h3><p>New cryptographic mechanisms must be evaluated for interoperability, performance, compatibility, and operational impact before broad deployment.</p>
+          </article>
+        </div>
+        <div class="challenge-note reveal"><span class="note-icon">i</span><p><strong>The engineering challenge:</strong> move from fragmented knowledge to evidence-based decisions—without assuming every system can be migrated in the same way.</p></div>
+      </div>
+    </section>
+
+    <section class="section quantum-section" id="quantum">
+      <div class="container quantum-layout">
+        <div class="quantum-copy reveal">
+          <div class="eyebrow"><span class="eyebrow-line"></span> UNDERSTANDING THE URGENCY</div>
+          <h2>The risk is not just<br>about <span>Q-Day.</span></h2>
+          <p>Q-Day is an informal term for the point when a sufficiently capable quantum computer could break certain widely used public-key cryptographic systems. Its timing remains uncertain—but data collected today may need protection for years to come.</p>
+          <div class="hndl-block">
+            <div class="hndl-symbol"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="21" width="32" height="22" rx="4"/><path d="M15 21v-7a9 9 0 0 1 18 0v7M24 29v6"/></svg></div>
+            <div><h3>Harvest Now, Decrypt Later</h3><p>An adversary may store encrypted data today in the hope of decrypting it in the future. This is especially relevant when information must remain confidential for a long time.</p></div>
+          </div>
+          <p class="small-note">The appropriate response depends on the data, its confidentiality lifetime, current protections, and the organisation's threat model.</p>
+        </div>
+        <div class="mosca-card reveal">
+          <div class="mosca-top"><span class="mini-tag">A PLANNING HEURISTIC</span><span class="mosca-mark">X + Y &gt; Z</span></div>
+          <h3>Mosca's Equation</h3>
+          <p class="mosca-intro">A way to reason about whether the time needed to protect data and migrate systems may exceed the estimated time available.</p>
+          <div class="equation-row"><span class="equation-letter">X</span><div><strong>Data confidentiality lifetime</strong><small>How long must the information remain protected?</small></div></div>
+          <div class="equation-row"><span class="equation-letter">Y</span><div><strong>Migration duration</strong><small>How long could the transition take?</small></div></div>
+          <div class="equation-row"><span class="equation-letter">Z</span><div><strong>Estimated time to a relevant quantum computer</strong><small>An uncertain estimate, not a known deadline.</small></div></div>
+          <div class="example-box"><span>ILLUSTRATIVE EXAMPLE</span><strong>12 years + 5 years &gt; 10 years</strong><p>If data needs 12 years of confidentiality and migration may take 5 years, a 10-year assumed horizon suggests urgency under those assumptions.</p></div>
+          <p class="disclaimer">Mosca's equation is a planning heuristic, not a prediction of when Q-Day will occur.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="approach">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <div class="eyebrow eyebrow-dark"><span class="eyebrow-line"></span> A MIGRATION LIFECYCLE</div>
+          <h2>From discovery to<br><span>informed transition.</span></h2>
+          <p>PQC migration is a programme of engineering work—not a single switch. These stages describe a practical framework we are studying and refining.</p>
+        </div>
+        <div class="lifecycle">
+          <div class="lifecycle-line" aria-hidden="true"></div>
+          <article class="life-step reveal"><div class="life-index">01</div><div class="life-content"><span class="life-tag">VISIBILITY</span><h3>Discover</h3><p>Identify cryptographic algorithms, libraries, protocols, certificates, configurations, and relevant dependencies across selected systems.</p><span class="life-output">Output: evidence-backed findings</span></div></article>
+          <article class="life-step reveal"><div class="life-index">02</div><div class="life-content"><span class="life-tag">STRUCTURE</span><h3>Inventory & map</h3><p>Organise discovered assets and relationships. A Cryptographic Bill of Materials (CBOM) can help represent cryptographic components in a structured format.</p><span class="life-output">Output: inventory and dependency context</span></div></article>
+          <article class="life-step reveal"><div class="life-index">03</div><div class="life-content"><span class="life-tag">RISK CONTEXT</span><h3>Assess & prioritise</h3><p>Consider algorithm exposure, data lifetime, business criticality, system dependencies, and migration complexity to inform priorities.</p><span class="life-output">Output: documented assumptions and priorities</span></div></article>
+          <article class="life-step reveal"><div class="life-index">04</div><div class="life-content"><span class="life-tag">ENGINEERING</span><h3>Evaluate & test</h3><p>Assess suitable standards-based PQC and hybrid approaches. Test compatibility, interoperability, performance, and security in controlled environments.</p><span class="life-output">Output: reproducible test evidence</span></div></article>
+          <article class="life-step reveal"><div class="life-index">05</div><div class="life-content"><span class="life-tag">TRANSITION</span><h3>Plan, migrate & monitor</h3><p>Use phased deployment, validation, and ongoing review. Build crypto-agility so future cryptographic changes can be managed deliberately.</p><span class="life-output">Output: a maintainable migration process</span></div></article>
+        </div>
+        <div class="framework-footnote"><span class="orange-square"></span>This lifecycle is a synthesis of common migration practices, not a claim that every organisation must follow one identical sequence.</div>
+      </div>
+    </section>
+
+    <section class="section dark-band" id="research">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="eyebrow"><span class="eyebrow-line"></span> RESEARCH & ENGINEERING</div>
+          <h2>Focused on the problems<br>behind the <span>transition.</span></h2>
+          <p>Our research direction is broad. Our first implementations should be narrow, testable, and informed by real engineering needs.</p>
+        </div>
+        <div class="research-grid">
+          <article class="research-card reveal"><div class="research-top"><span class="research-count">01</span><span class="status status-exploring">Exploring</span></div><div class="research-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="20" cy="20" r="11"/><path d="m28 28 10 10M15 20h10M20 15v10"/></svg></div><h3>Cryptographic discovery</h3><p>Investigate methods to identify selected cryptographic APIs, libraries, and configurations, with evidence that engineers can inspect.</p><div class="research-meta">Potential output <span>Repository findings</span></div></article>
+          <article class="research-card reveal"><div class="research-top"><span class="research-count">02</span><span class="status status-exploring">Exploring</span></div><div class="research-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M13 5h17l7 7v31H13z"/><path d="M30 5v9h7M19 22h12M19 28h12M19 34h8"/></svg></div><h3>Cryptographic inventory</h3><p>Explore structured inventories and CBOM-based representations to help organise discovered assets and their known relationships.</p><div class="research-meta">Potential output <span>Structured inventory</span></div></article>
+          <article class="research-card reveal"><div class="research-top"><span class="research-count">03</span><span class="status status-research">Research direction</span></div><div class="research-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5 39 11v12c0 10-6 16-15 20C15 39 9 33 9 23V11z"/><path d="m17 24 5 5 10-11"/></svg></div><h3>Risk & prioritisation</h3><p>Study transparent ways to combine data lifetime, criticality, cryptographic exposure, and migration effort—without hiding assumptions behind a score.</p><div class="research-meta">Potential output <span>Explainable assessment</span></div></article>
+          <article class="research-card reveal"><div class="research-top"><span class="research-count">04</span><span class="status status-research">Research direction</span></div><div class="research-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 11h32M8 24h32M8 37h32"/><circle cx="18" cy="11" r="4"/><circle cx="31" cy="24" r="4"/><circle cx="22" cy="37" r="4"/></svg></div><h3>Migration validation</h3><p>Investigate repeatable tests for compatibility, interoperability, latency, message size, and operational impact in controlled environments.</p><div class="research-meta">Potential output <span>Benchmark evidence</span></div></article>
+        </div>
+        <div class="research-honesty reveal"><div class="honesty-icon">✓</div><div><strong>Evidence over promises.</strong><p>These are research and product-exploration areas. Capabilities will be described as available only after implementation and appropriate validation.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="principles">
+      <div class="container agility-layout">
+        <div class="agility-copy reveal">
+          <div class="eyebrow eyebrow-dark"><span class="eyebrow-line"></span> DESIGNED FOR CHANGE</div>
+          <h2>Crypto-agility is not<br>a feature. It's a <span>discipline.</span></h2>
+          <p>Crypto-agility is the ability to change cryptographic algorithms, parameters, or implementations without redesigning an entire system each time. It depends on architecture, governance, testing, and operational readiness.</p>
+          <a class="text-link dark-link" href="#contact">Discuss an engineering challenge <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="agility-visual reveal">
+          <div class="agility-node node-core"><span class="node-dot"></span><strong>Application</strong><small>Stable interface</small></div>
+          <div class="agility-connect connect-a"></div><div class="agility-connect connect-b"></div><div class="agility-connect connect-c"></div>
+          <div class="agility-node node-one"><span class="node-dot"></span><strong>Classical</strong><small>Existing mechanism</small></div>
+          <div class="agility-node node-two"><span class="node-dot"></span><strong>Hybrid</strong><small>Evaluated combination</small></div>
+          <div class="agility-node node-three"><span class="node-dot"></span><strong>PQC</strong><small>Standards-based option</small></div>
+          <div class="agility-foot">Illustrative architecture concept — not a deployed QPrakriti product.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="container about-layout">
+        <div class="about-mark reveal"><div class="about-orbit orbit-one"></div><div class="about-orbit orbit-two"></div><div class="about-core">Q<span>.</span></div><div class="about-caption">RESEARCH · ENGINEERING · IMPACT</div></div>
+        <div class="about-copy reveal">
+          <div class="eyebrow eyebrow-dark"><span class="eyebrow-line"></span> ABOUT QPRAKRITI</div>
+          <h2>Rooted in curiosity.<br>Building with <span>purpose.</span></h2>
+          <p>QPrakriti is an emerging technology startup founded by graduates of RGUKT Srikakulam. We are exploring software-oriented approaches to the engineering challenges of post-quantum cryptography migration.</p>
+          <p>Our starting point is simple: listen to practitioners, understand the problem, test assumptions, and build only where evidence shows a meaningful need.</p>
+          <div class="principle-list"><div><span>01</span><strong>Understand before building</strong></div><div><span>02</span><strong>Validate before claiming</strong></div><div><span>03</span><strong>Collaborate to solve real problems</strong></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light insights-section" id="insights">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="eyebrow eyebrow-dark"><span class="eyebrow-line"></span> FIELD NOTES</div>
+          <h2>Learn the challenge.<br><span>Question the assumptions.</span></h2>
+          <p>Foundational concepts guiding our current learning and research. These are educational explainers, not claims of proprietary findings.</p>
+        </div>
+        <div class="insight-grid">
+          <a class="insight-card reveal" href="#quantum"><span class="insight-type">CONCEPT / 01</span><h3>Q-Day and long-lived data</h3><p>Why the confidentiality lifetime of information matters when planning cryptographic migration.</p><span class="insight-arrow">↗</span></a>
+          <a class="insight-card reveal" href="#approach"><span class="insight-type">ENGINEERING / 02</span><h3>Why discovery comes first</h3><p>How a better view of cryptographic assets can support more informed migration decisions.</p><span class="insight-arrow">↗</span></a>
+          <a class="insight-card reveal" href="#research"><span class="insight-type">RESEARCH / 03</span><h3>Testing beyond algorithm choice</h3><p>Compatibility, interoperability, performance, and evidence in a PQC transition.</p><span class="insight-arrow">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section section-dark" id="contact">
+      <div class="contact-glow" aria-hidden="true"></div>
+      <div class="container contact-layout reveal">
+        <div><div class="eyebrow"><span class="eyebrow-line"></span> COLLABORATE WITH US</div><h2>Real problems make<br><span>better engineering.</span></h2><p>We welcome conversations with practitioners, researchers, and organisations working through PQC migration challenges. Share a problem, question an assumption, or help us understand where software can make a practical difference.</p></div>
+        <div class="contact-panel"><span class="contact-panel-label">START A CONVERSATION</span><h3>Have a migration challenge to explore?</h3><p>We would value the opportunity to learn from your experience and discuss potential research or prototyping directions.</p><a class="button button-orange" href="mailto:CONTACT_EMAIL?subject=QPrakriti%20%E2%80%94%20PQC%20Engineering%20Challenge">Contact QPrakriti <span aria-hidden="true">↗</span></a><small>Replace CONTACT_EMAIL with the company's official email before publishing.</small></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand footer-brand" href="#top"><img src="assets/qprakriti-original-logo.jpg" alt="" class="brand-mark"><span class="brand-word">QPrakriti<span class="brand-dot">.</span><small>QUANTUM-SAFE ENGINEERING</small></span></a>
+      <p>Exploring practical engineering approaches to the quantum-safe transition.</p>
+      <div class="footer-links"><a href="#challenge">The Challenge</a><a href="#approach">Our Approach</a><a href="#research">Research</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="year">2026</span> QPrakriti. All rights reserved.</span><span>Research-led. Evidence-driven. Built with purpose.</span></div>
+    <div class="container footer-disclaimer">QPrakriti is an emerging technology startup exploring PQC migration engineering. Content on this website describes technical concepts and research directions; it does not imply that every described capability is implemented, validated, certified, or production-ready. Migration decisions should be based on the organisation's context and relevant standards.</div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
